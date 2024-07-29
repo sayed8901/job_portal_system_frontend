@@ -10,7 +10,7 @@ fetch(`${config.baseUrl}/category/`)
     data.forEach((cat) => {
       // console.log(cat.name);
       categories_parent.innerHTML += `
-            <option>${cat.name}</option>
+            <option>${cat.id}. ${cat.name}</option>
         `;
     });
   })
@@ -30,8 +30,10 @@ const handleJobPublish = (event) => {
   // creating a job publish data object
   const jobPublishData = {
     // job_category is handled as an array as it might be multiple, so sent as a list to backend
-    // also converting it into a integer number as primary key for the job category
-    job_category: [parseInt(document.getElementById("job_category").value)],
+    job_category: [
+      // also need to extract the categoryID as primary key of the job category
+      parseInt(document.getElementById("job_category").value[0]),
+    ],
 
     job_title: formData.get("job_title"),
     vacancy: parseInt(formData.get("vacancy")),
