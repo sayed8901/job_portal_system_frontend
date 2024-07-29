@@ -1,0 +1,71 @@
+<nav class="bg-gray-800 sm:fixed z-10 container">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div
+        class="flex flex-1 items-center justify-start sm:items-stretch sm:justify-start"
+      >
+        <div class="flex flex-shrink-0 items-center">
+          <img
+            class="h-8 w-auto"
+            src="../assets/front_page-icon.jpg"
+            alt="Your Company"
+          />
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div
+            class="flex gap-1 md:gap-5 items-center"
+            id="navbar-element-main"
+          >
+            <a
+              href="./index.html"
+              class="rounded-md px-1 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white text-center"
+              aria-current="page"
+              >Home</a
+            >
+            <a
+              href="./all_jobs_by_category.html"
+              class="rounded-md px-1 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white text-center"
+              >All Jobs</a
+            >
+
+            <!-- based on user_role, some menu will be added here from backend API -->
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-center mr-2">
+        <!-- Profile image -->
+        <img
+          class="h-8 w-8 rounded-full"
+          src="./assets/profile_img.png"
+          alt="Profile Icon"
+          style="filter: invert(100%)"
+        />
+        <p class="text-white text-sm" id="logged_in_username">Username</p>
+      </div>
+
+      <div class="flex items-center" id="navbar-element-auth">
+        <!-- based on user activeness, profile & logout menu will be added here from backend API -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2" id="navbar-element-mobile">
+      <a
+        href="./index.html"
+        class="block rounded-md px-3 py-2 text-base font-medium text-white"
+        aria-current="page"
+        >Home</a
+      >
+      <a
+        href="./all_jobs_by_category.html"
+        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+        >All Jobs</a
+      >
+
+      <!-- based on user_role, some menu will be added here from backend API -->
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/front_page-icon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <title>Login</title>
+  </head>
+  <body class="container mx-auto px-2 sm:px-0">
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <!-- Profile data -->
+    <form
+      class="w-full md:w-2/3 lg:w-1/2 mx-auto px-5 mb-10 pt-20"
+      id="job_seeker_profile_update_form"
+      onsubmit="handleUpdateJobSeekerProfile(event)"
+    >
+      <div class="space-y-12">
+        <div
+          class="border-b border-gray-900/10 pb-12"
+          id="applicant_profile_account_info"
+        >
+          <h2 class="text-base font-semibold leading-7 text-gray-900">
+            Applicant Profile
+          </h2>
+
+          <!-- applicant_profile_account_info will be added here from backend API -->
+        </div>
+
+        <div
+          class="border-b border-gray-900/10 pb-12"
+          id="applicant_profile_personal_info"
+        >
+          <h2 class="text-base font-semibold leading-7 text-gray-900">
+            Personal Information
+          </h2>
+
+          <!-- applicant_profile_personal_info will be added here from backend API -->
+        </div>
+      </div>
+
+      <!-- to show error messages -->
+      <div id="error-messages" class="text-red-600"></div>
+
+      <!-- update btn -->
+      <div class="mt-6 flex items-center justify-end gap-x-6">
+        <button
+          type="submit"
+          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          Update
+        </button>
+      </div>
+    </form>
+
+    <script src="./navbar.js"></script>
+    <script src="./config.js"></script>
+    <script src="./auth.js"></script>
+
+    <script src="./job_seeker_profile.js"></script>
+  </body>
+</html>

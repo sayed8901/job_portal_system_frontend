@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/front_page-icon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS JavaScript CDN -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js"
+      defer
+    ></script> -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <!-- swiffyslider CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <title>BD Job Portal</title>
+  </head>
+
+  <body class="container mx-auto px-2 sm:px-0">
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <!-- banner section -->
+    <div id="banner"></div>
+
+    <!-- all employer section -->
+    <div>
+      <div class="bg-white pt-16 sm:pt-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2
+            class="text-center text-3xl font-semibold leading-8 text-gray-900 my-10"
+          >
+            Top Companies
+          </h2>
+          <p
+            class="text-center text-lg leading-8 text-gray-900 my-8 w-full sm:w-3/4 mx-auto"
+          >
+            Countries top industries have been searching for best candidates for
+            their organizations. Keep an eye on them for your next move..
+          </p>
+
+          <!-- slider -->
+          <div class="swiffy-slider slider-item-show2 slider-nav-outside slider-nav-dark slider-nav-sm slider-nav-visible slider-nav-page slider-item-snapstart slider-nav-autoplay slider-nav-autopause slider-item-ratio slider-item-ratio-contain slider-item-ratio-32x9 bg-white shadow-lg py-3 py-lg-4" data-slider-nav-autoplay-interval="2000">
+            <div class="slider-container" id="employers-container">
+              <!-- employer data will be added here from backend API -->
+
+            </div>
+
+            <button type="button" class="slider-nav" aria-label="Go left"></button>
+            <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- category section -->
+    <div>
+      <div class="bg-white pt-16 sm:pt-24 pb-24 sm:pb-36">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8" id="category-container">
+          <h2
+            class="text-center text-3xl font-semibold leading-8 text-gray-900 my-10"
+          >
+            Jobs Category
+          </h2>
+          <p
+            class="text-center text-lg leading-8 text-gray-900 my-8 w-full sm:w-3/4 mx-auto"
+          >
+            We have a huge collection of job openings on different categories,
+            so that you can get your own jobs by checking out these categories.
+          </p>
+
+          <!-- category data will be added here from backend API -->
+        </div>
+        <div id="view-jobs" class="flex justify-end mr-16">
+          <!-- btn will be added through backend -->
+        </div>
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <footer id="footer"></footer>
+
+    <!-- js attachment scripts -->
+    <script src="./navbar.js"></script>
+    <script src="./config.js"></script>
+    <script src="./auth.js"></script>
+
+    <script src="./components.js"></script>
+
+    <!-- swiffyslider CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+  </body>
+</html>
