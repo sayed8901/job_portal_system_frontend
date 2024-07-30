@@ -9,9 +9,10 @@ fetch(`${config.baseUrl}/category/`)
     const categories_parent = document.getElementById("job_category");
     data.forEach((cat) => {
       // console.log(cat.name);
-      categories_parent.innerHTML += `
-            <option>${cat.id}. ${cat.name}</option>
-        `;
+      const option = document.createElement("option");
+      option.value = cat.id; // to be used while job_publish purposes
+      option.text = cat.name; // to display the category names
+      categories_parent.appendChild(option);
     });
   })
   .catch((err) => {
@@ -30,7 +31,7 @@ const handleJobPublish = (event) => {
   // creating a job publish data object
   const jobPublishData = {
     // job_category is handled as an array as it might be multiple, so sent as a list to backend
-    // extract the categoryID of the job category from the selected options of the formData
+    // extracting job category from the selected options of the formData
     job_category: Array.from(document.getElementById("job_category").selectedOptions).map(option => parseInt(option.value)),
 
     job_title: formData.get("job_title"),
