@@ -30,10 +30,8 @@ const handleJobPublish = (event) => {
   // creating a job publish data object
   const jobPublishData = {
     // job_category is handled as an array as it might be multiple, so sent as a list to backend
-    job_category: [
-      // also need to extract the categoryID as primary key of the job category
-      parseInt(document.getElementById("job_category").value[0]),
-    ],
+    // extract the categoryID of the job category from the selected options of the formData
+    job_category: Array.from(document.getElementById("job_category").selectedOptions).map(option => parseInt(option.value)),
 
     job_title: formData.get("job_title"),
     vacancy: parseInt(formData.get("vacancy")),
