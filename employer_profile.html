@@ -16,52 +16,55 @@
     />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
-    <title>Login</title>
+    <title>Job Seeker Profile</title>
   </head>
   <body class="container mx-auto px-2 sm:px-0">
     <!-- navbar -->
     <div id="navbar"></div>
 
     <!-- Profile data -->
-    <form
-      class="w-full md:w-2/3 lg:w-1/2 mx-auto px-5 mb-10 pt-20"
-      id="employer_profile_update_form"
-      onsubmit="handleUpdateEmployerProfile(event)"
-    >
-      <div class="space-y-12">
-        <div
-          class="border-b border-gray-900/10 pb-12"
-          id="applicant_profile_account_info"
-        >
-          <h2 class="text-base font-semibold leading-7 text-gray-900">
-            Applicant Profile
-          </h2>
-
-          <!-- applicant_profile_account_info will be added here from backend API -->
-        </div>
-
-        <div
-          class="border-b border-gray-900/10 pb-12"
-          id="applicant_profile_personal_info"
-        >
-          <h2 class="text-base font-semibold leading-7 text-gray-900">
-            Organizational Information
-          </h2>
-
-          <!-- applicant_profile_personal_info will be added here from backend API -->
-        </div>
+    <div class="w-full md:w-2/3 lg:w-1/2 mx-auto px-5 mb-10 pt-20">
+      <div class="px-4 sm:px-0">
+        <h3 class="text-base font-semibold leading-7 text-gray-900 text-center">
+          Employer Information
+        </h3>
+        <p class="pt-10 max-w-2xl text-sm leading-6 text-gray-500 text-center">
+          Account details
+        </p>
+      </div>
+      <div
+        id="employer_profile_account_info"
+        class="mt-6 border-t border-gray-100"
+      >
+        <!-- data will be added from backend API -->
       </div>
 
-      <!-- update btn -->
-      <div class="mt-6 flex items-center justify-end gap-x-6">
-        <button
-          type="submit"
-          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        >
-          Update
-        </button>
+      <div class="px-4 sm:px-0">
+        <p class="pt-10 max-w-2xl text-sm leading-6 text-gray-500 text-center">
+          Organization Info
+        </p>
       </div>
-    </form>
+      <div
+        id="employer_profile_personal_info"
+        class="mt-6 border-t border-gray-100"
+      >
+        <!-- data will be added from backend API -->
+      </div>
+
+      <!-- update profile -->
+      <div class="flex justify-between items-center my-12">
+        <a
+          href="./my_jobs.html"
+          class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >View My Job Posts</a
+        >
+        <a
+          href="./employer_profile_update.html"
+          class="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+          >Update profile data <span aria-hidden="true">&rarr;</span></a
+        >
+      </div>
+    </div>
 
     <script src="./navbar.js"></script>
     <script src="./config.js"></script>

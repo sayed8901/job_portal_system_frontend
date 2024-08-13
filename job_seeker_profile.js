@@ -10,42 +10,42 @@ fetch(`${config.baseUrl}/accounts/user/?user_id=${user_id}`)
       "applicant_profile_account_info"
     );
 
-    const div = document.createElement("div");
-    div.innerHTML = `
-            <p class="mt-1 text-sm leading-6 text-gray-600">Hello "${user.first_name} ${user.last_name}". This is your profile page.</p>
+    const dl = document.createElement("dl");
+    dl.classList.add("divide-y", "divide-gray-100");
 
-
-            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-              <div class="sm:col-span-4">
-                <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
-                <div class="mt-2">
-                  <input readonly value="${user.username}" type="text" name="username" id="username" autocomplete="username" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
-
-              <div class="sm:col-span-3">
-                <label for="first_name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
-                <div class="mt-2">
-                  <input readonly value="${user.first_name}" type="text" name="first_name" id="first_name" autocomplete="first_name" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
-
-              <div class="sm:col-span-3">
-                <label for="last_name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
-                <div class="mt-2">
-                  <input readonly value="${user.last_name}" type="text" name="last_name" id="last_name" autocomplete="last_name" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
-
-              <div class="sm:col-span-4">
-                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-                <div class="mt-2">
-                  <input readonly value="${user.email}" id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
+    dl.innerHTML = `
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                Full name
+              </dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.first_name} ${user.last_name}
+              </dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                Username
+              </dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.username}
+              </dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                Email address
+              </dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.email}
+              </dd>
             </div>
     `;
-    account_info_container.appendChild(div);
+    account_info_container.appendChild(dl);
   });
 
 fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
@@ -62,71 +62,88 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
       "applicant_profile_personal_info"
     );
 
-    const div = document.createElement("div");
-    div.innerHTML = `
-            <p class="mt-1 text-sm leading-6 text-gray-600">You can easily update your profile information.</p>
+    const dl = document.createElement("dl");
+    dl.classList.add("divide-y", "divide-gray-100");
 
-            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-              <div class="sm:col-span-3">
-                <label for="fathers_name" class="block text-sm font-medium leading-6 text-gray-900">Fathers name</label>
-                <div class="mt-2">
-                  <input value="${user.fathers_name}" type="text" name="fathers_name" id="fathers_name" autocomplete="fathers_name" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
-
-              <div class="sm:col-span-3">
-                <label for="mothers_name" class="block text-sm font-medium leading-6 text-gray-900">Mothers name</label>
-                <div class="mt-2">
-                  <input value="${user.mothers_name}" type="text" name="mothers_name" id="mothers_name" autocomplete="mothers_name" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
-
-              <div class="sm:col-span-4">
-                <label for="contact_no" class="block text-sm font-medium leading-6 text-gray-900">Contact no</label>
-                <div class="mt-2">
-                  <input value="${user.contact_no}" type="text" name="contact_no" id="contact_no" autocomplete="contact_no" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
+    dl.innerHTML = `
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                Father name
+              </dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.fathers_name}
+              </dd>
             </div>
-            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-              <div class="sm:col-span-3">
-                <label for="sex" class="block text-sm font-medium leading-6 text-gray-900">Sex</label>
-                <div class="mt-2">
-                  <input readonly value="${user.sex}" type="text" name="sex" id="sex" autocomplete="sex" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
-
-              <div class="sm:col-span-3">
-                <label for="age" class="block text-sm font-medium leading-6 text-gray-900">Age</label>
-                <div class="mt-2">
-                  <input value="${user.age}" type="number" name="age" id="age" autocomplete="age" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
-
-              <div class="col-span-full">
-                <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
-                <div class="mt-2">
-                  <input value="${user.address}" type="text" name="address" id="address" autocomplete="address" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
-
-              <div class="col-span-full">
-                <label for="education" class="block text-sm font-medium leading-6 text-gray-900">Education</label>
-                <div class="mt-2">
-                  <input value="${user.education}" type="text" name="education" id="education" autocomplete="education" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-                <p class="mt-3 text-sm leading-6 text-gray-600">Write about your educational background in short</p>
-              </div>
-
-              <div class="sm:col-span-3">
-                <label for="experience" class="block text-sm font-medium leading-6 text-gray-900">Job Experience (in yrs)</label>
-                <div class="mt-2">
-                  <input value="${user.experience}" type="text" name="experience" id="experience" autocomplete="experience" class="block w-full rounded-md border-0 py-2 px-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-              </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                Mothers name
+              </dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.mothers_name}
+              </dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                Contact number
+              </dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.contact_no}
+              </dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">Sex</dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.sex}
+              </dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">Age</dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.age} yrs
+              </dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                Address
+              </dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.address}
+              </dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                Education
+              </dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.education}
+              </dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                Experience
+              </dt>
+              <dd
+                class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
+              >
+                ${user.experience}
+              </dd>
             </div>
     `;
-    account_info_container.appendChild(div);
+    account_info_container.appendChild(dl);
   });
 
 const handleUpdateJobSeekerProfile = (event) => {

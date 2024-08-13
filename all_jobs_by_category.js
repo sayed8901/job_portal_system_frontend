@@ -131,12 +131,10 @@ const getJobs = (categorySlugName = "") => {
               </div>
             </div>
           </div>
-          ${
-            user_type
-              ? `<a type="button" href="./job_post_details.html?post_id=${post.id}" class="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200 my-5">View Details</a>`
-              : ""
-          }
-        `;
+          
+          <a type="button" href="./job_post_details.html?post_id=${post.id}" class="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200 my-5">View Details</a>
+          `
+        ;
         AllJobsContainer.appendChild(div);
 
         // Set up countdown timer

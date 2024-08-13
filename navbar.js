@@ -50,6 +50,23 @@ fetch("./navbar.html")
       `;
     }
 
-    document.getElementById("logged_in_username").innerText = username;
+    if (user_type) {
+      const login_info = document.getElementById("logged_in_user_info");
+      login_info.classList.remove("hidden");
+
+      login_info.innerHTML = `
+        <div class="flex flex-row items-center justify-center gap-1">
+          <p class="text-white font-bold text-sm text-green-300">${username}</p>
+          <!-- Profile image -->
+          <img
+            class="h-4 w-4 rounded-full -mr-2"
+            src="./assets/profile_img.png"
+            alt="Profile Icon"
+            style="filter: invert(100%)"
+          />
+        </div>
+        <p class="text-white text-sm">( ${user_type} )</p>
+    `;
+    }
   })
   .catch((error) => console.error("Error loading navbar:", error));
