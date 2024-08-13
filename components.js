@@ -9,6 +9,12 @@ fetch("./banner.html")
   .then((res) => res.text())
   .then((data) => (document.getElementById("banner").innerHTML = data));
 
+
+// advice
+fetch("./advice_section.html")
+  .then((res) => res.text())
+  .then((data) => (document.getElementById("advice").innerHTML = data));
+
   
 
 // company
