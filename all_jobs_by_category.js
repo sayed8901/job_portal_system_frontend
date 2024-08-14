@@ -160,7 +160,7 @@ const getJobs = (categorySlugName = "") => {
             // Each interval checks if the countdownContainer exists before attempting to update it.
             if (countdownContainer) {
               countdownContainer.classList.add("countdown");
-              countdownContainer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining...`;
+              countdownContainer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
             } else {
               // If the container does not exist, the interval is cleared and removed from countdownIntervals.
               clearInterval(countdownIntervals[post.id]);
