@@ -59,3 +59,10 @@ const downloadPDF = () => {
   // Use html2pdf to generate and download the PDF
   html2pdf(content, options);
 };
+
+
+
+// footer
+fetch("./footer.html")
+  .then((res) => res.text())
+  .then((data) => (document.getElementById("footer").innerHTML = data));
