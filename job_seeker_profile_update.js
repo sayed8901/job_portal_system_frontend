@@ -56,7 +56,6 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
   .then((response) => response.json())
   .then((user) => {
     console.log(user);
-    localStorage.setItem("job_seeker_id", user.id);
 
     const account_info_container = document.getElementById(
       "applicant_profile_personal_info"

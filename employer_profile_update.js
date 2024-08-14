@@ -56,7 +56,6 @@ fetch(`${config.baseUrl}/employer/by_user_id/?user_id=${user_id}`, {
   .then((response) => response.json())
   .then((user) => {
     console.log(user);
-    localStorage.setItem("employer_id", user.id);
 
     const account_info_container = document.getElementById(
       "employer_profile_personal_info"

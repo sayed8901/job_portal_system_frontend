@@ -41,27 +41,6 @@ fetch(`${config.baseUrl}/employer/list/`)
   });
 
 
-// to show the categories only : extra part
-// fetch(`${config.baseUrl}/category/`)
-//   .then((res) => res.json())
-//   .then((data) => {
-//     console.log(data);
-//     const categoryContainer = document.getElementById('category-container');
-//     const div = document.createElement('div');
-//     div.classList.add(
-//       'flex', 'flex-wrap', 'justify-evenly', 'mx-auto', 'mt-10', 'mb-16', 'items-center', 'gap-x-6', 'gap-y-10', 'lg:mx-0', 
-//     );
-//     data.forEach(cat => {
-//         div.innerHTML += `
-//             <p class="animated-border px-3.5 py-2.5 text-sm font-semibold text-center">${cat.name}</p>
-//         `;
-//     });
-//     categoryContainer.appendChild(div);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-
 
 // view jobs btn dynamic path & title
 // const user_type = localStorage.getItem('user_type');
