@@ -11,10 +11,10 @@ fetch(`${config.baseUrl}/accounts/user/?user_id=${user_id}`)
     );
 
     const dl = document.createElement("dl");
-    dl.classList.add("divide-y", "divide-gray-100");
+    dl.classList.add("divide-y", "divide-gray-200");
 
     dl.innerHTML = `
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Full name
               </dt>
@@ -24,7 +24,7 @@ fetch(`${config.baseUrl}/accounts/user/?user_id=${user_id}`)
                 ${user.first_name} ${user.last_name}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Username
               </dt>
@@ -34,7 +34,7 @@ fetch(`${config.baseUrl}/accounts/user/?user_id=${user_id}`)
                 ${user.username}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Email address
               </dt>
@@ -63,10 +63,10 @@ fetch(`${config.baseUrl}/employer/by_user_id/?user_id=${user_id}`, {
     );
 
     const dl = document.createElement("dl");
-    dl.classList.add("divide-y", "divide-gray-100");
+    dl.classList.add("divide-y", "divide-gray-200");
 
     dl.innerHTML = `
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Company name
               </dt>
@@ -76,7 +76,7 @@ fetch(`${config.baseUrl}/employer/by_user_id/?user_id=${user_id}`, {
                 ${user.company_name}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Company Address
               </dt>
@@ -86,7 +86,7 @@ fetch(`${config.baseUrl}/employer/by_user_id/?user_id=${user_id}`, {
                 ${user.company_address}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Business info
               </dt>

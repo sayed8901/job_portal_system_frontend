@@ -15,7 +15,7 @@ fetch(`${config.baseUrl}/accounts/user/?user_id=${user_id}`)
             <p class="mt-1 text-sm leading-6 text-gray-600">Hello "${user.first_name} ${user.last_name}". This is your profile page.</p>
 
 
-            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
               <div class="sm:col-span-4">
                 <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
                 <div class="mt-2">
@@ -66,7 +66,7 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
     div.innerHTML = `
             <p class="mt-1 text-sm leading-6 text-gray-600">You can easily update your profile information.</p>
 
-            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
               <div class="sm:col-span-3">
                 <label for="fathers_name" class="block text-sm font-medium leading-6 text-gray-900">Fathers name</label>
                 <div class="mt-2">
@@ -88,7 +88,7 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
                 </div>
               </div>
             </div>
-            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="mt-5 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
               <div class="sm:col-span-3">
                 <label for="sex" class="block text-sm font-medium leading-6 text-gray-900">Sex</label>
                 <div class="mt-2">

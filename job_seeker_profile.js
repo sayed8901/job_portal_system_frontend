@@ -11,10 +11,10 @@ fetch(`${config.baseUrl}/accounts/user/?user_id=${user_id}`)
     );
 
     const dl = document.createElement("dl");
-    dl.classList.add("divide-y", "divide-gray-100");
+    dl.classList.add("divide-y", "divide-gray-200");
 
     dl.innerHTML = `
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Full name
               </dt>
@@ -24,7 +24,7 @@ fetch(`${config.baseUrl}/accounts/user/?user_id=${user_id}`)
                 ${user.first_name} ${user.last_name}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Username
               </dt>
@@ -34,7 +34,7 @@ fetch(`${config.baseUrl}/accounts/user/?user_id=${user_id}`)
                 ${user.username}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Email address
               </dt>
@@ -63,10 +63,10 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
     );
 
     const dl = document.createElement("dl");
-    dl.classList.add("divide-y", "divide-gray-100");
+    dl.classList.add("divide-y", "divide-gray-200");
 
     dl.innerHTML = `
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Father name
               </dt>
@@ -76,7 +76,7 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
                 ${user.fathers_name}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Mothers name
               </dt>
@@ -86,7 +86,7 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
                 ${user.mothers_name}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Contact number
               </dt>
@@ -96,7 +96,7 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
                 ${user.contact_no}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">Sex</dt>
               <dd
                 class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
@@ -104,7 +104,7 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
                 ${user.sex}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">Age</dt>
               <dd
                 class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
@@ -112,7 +112,7 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
                 ${user.age} yrs
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Address
               </dt>
@@ -122,7 +122,7 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
                 ${user.address}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Education
               </dt>
@@ -132,7 +132,7 @@ fetch(`${config.baseUrl}/job_seeker/by_user_id/?user_id=${user_id}`, {
                 ${user.education}
               </dd>
             </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
                 Experience
               </dt>

@@ -91,15 +91,15 @@ fetch(
                 </div>
               </div>
             </div>
-            <div class="flex flex-col gap-10">
+            <div class="flex flex-col">
               <a
                 type="button" href="./job_post_details.html?post_id=${post.job_post.id}"
-                class="inline-flex items-center rounded-md bg-green-300 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-green-200"
+                class="inline-flex items-center rounded-md bg-green-300 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-green-200 mx-2 my-5"
               >
                 View Details
               </a>
               <button
-                class="inline-flex items-center rounded-md bg-red-300 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-200" onclick="handleWithdrawApplication(${post.id})"
+                class="inline-flex items-center rounded-md bg-red-300 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-200 mx-2 my-5" onclick="handleWithdrawApplication(${post.id})"
               >
                 Withdraw
               </button>
